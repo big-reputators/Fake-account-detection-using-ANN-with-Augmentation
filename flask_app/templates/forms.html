@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Instagram Account Authenticity Checker</title>
+    <style>
+      /* Style the form inputs and labels */
+      label, input {
+        display: block;
+        margin-bottom: 10px;
+      }
+      div {
+         display: inline-block;
+         margin-right: 100px;
+      }
+
+      input[type="submit"] {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #2196f3;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #0c7cd5;
+      }
+      /* Style the error messages */
+      .error {
+        color: red;
+        margin-top: 5px;
+      }
+      h1 {
+        font-size: 32px;
+        text-align: center;
+      }
+      form {
+        max-width: 700px;
+        margin:  auto;
+        padding: 80px;
+        border: 50px solid #ccc;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Instagram Account Authenticity Checker</h1>
+    <form action="{{ url_for('gfg')}}" method="post">
+    <div>
+    <label for="profile_pic">Profile Picture:</label>
+    <input type="radio" id="yes" name="profile_pic" value="Yes">
+    <label for="yes">Yes</label>
+    <input type="radio" id="no" name="profile_pic" value="No">
+    <label for="no">No</label>
+    </div>
+    <label for="numslengthusername">nums/length username:</label>
+    <input type="text" id="numslengthusername" name="numslengthusername"  required>
+    
+    <label for="fullnamewords">fullname words:</label>
+    <input type="number" id="fullnamewords" name="fullnamewords" required>
+    <label for="numslengthfullname">nums/length fullname:</label>
+    <input type="text" id="numslengthfullname" name="numslengthfullname"  required>
+    <label for="nameusername">name==username:</label>
+    <input type="number" id="nameusername" name="nameusername" required>
+    
+    <label for="description">Description:</label>
+    <input type="number" id="description" name="description" required>
+    
+    
+    <label for="external_url">External URL:</label>
+<div>
+  <label for="yes-external_url">Yes</label>
+  <input type="radio" id="yes-external_url" name="external_url" value="yes">
+  <label for="no-external_url">No</label>
+  <input type="radio" id="no-external_url" name="external_url" value="no">
+</div>
+
+<label for="private">Private Account:</label>
+<div>
+  <label for="yes-private">Yes</label>
+  <input type="radio" id="yes-private" name="private" value="yes">
+  <label for="no-private">No</label>
+  <input type="radio" id="no-private" name="private" value="no">
+</div>
+
+    
+    <label for="posts">Number of Posts:</label>
+    <input type="number" id="posts" name="posts" min="0" required>
+    
+    <label for="followers">Number of Followers:</label>
+    <input type="number" id="followers" name="followers" min="0" required>
+
+    <label for="following">Number of Following:</label>
+    <input type="number" id="following" name="following" min="0" required>
+
+    <button type="submit">Check Account Authenticity</button>
+  </form>
+</body>
+</html>
+  
